@@ -940,6 +940,7 @@ ul li {
   background-image: url('/images/WebAble-Logo.png');
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .bounce {
@@ -1065,21 +1066,17 @@ hr.about-philosophy {
   margin-bottom: 70px;
 }
 
-.process-text {
-    //width: 92%;
-    text-align: center;
-}
 
 .process-text p{
     margin-bottom: 30px;
-    font-size: 1.25em;
+    font-size: 1.1rem;
 }
 /*.principle-text p{
     margin-bottom: 0;
 }*/
 .meet-the-team p{
     margin-bottom: 0;
-          font-size: 1.25rem;
+          font-size: 1.1rem;
 
 }
 
@@ -1228,7 +1225,6 @@ margin:4rem auto;
     font-weight: bold;
     letter-spacing: 0.5px;
     font-family: 'MuseoSans700';
-    text-align: center;
     text-transform: uppercase;
     }
 }
@@ -1262,6 +1258,7 @@ margin:4rem auto;
 .abt {
     max-width: 86.5rem;
   padding: 0rem 4rem;
+  margin: 0 auto;
 }
 
 .endpic{
@@ -1282,9 +1279,12 @@ margin:4rem auto;
     font-size: 1.15em;
     margin-bottom: 1.2rem;
 }
+
+.our-cap a {
+  color: #0063ab;
+}
 .meet{
     padding-left:0px;
-    text-align: center;
 }
 .meet-the-team h3{
     margin-bottom: 1%;
@@ -1336,7 +1336,6 @@ margin:4rem auto;
 }
 
 .capability-details {
-    text-align: center;
       padding: 1rem 4rem 0rem 4rem;
 }
 
@@ -1349,7 +1348,7 @@ margin:4rem auto;
     text-transform: uppercase;
 }
 .capability-details p{
-   font-size: 1.25rem;
+   font-size: 1.1rem;
 }
 
 .wrapper.capability-details .strategy h3 {
@@ -1416,7 +1415,7 @@ margin:4rem auto;
 }
 .capabilities p {
     margin-bottom: 0!important;
-    font-size: 1.25em;
+    font-size: 1.1rem;
 }
 .capabilities h3{
     margin-bottom:17px;
@@ -1785,9 +1784,6 @@ font-weight: bold;
     }
 }
 
-.capabilities {
-    text-align: center;
-}
 
 .capabilities h3{
     font-size: 1.4em!important;
@@ -1796,9 +1792,6 @@ font-weight: bold;
     font-family: 'MuseoSans700';
 }
 
-.clientele {
-    text-align: center;
-}
 
 .clientele h3{
     font-size: 1.4em!important;
@@ -1808,7 +1801,7 @@ font-weight: bold;
 }
 .clientele p{
     margin-bottom: 0!important;
-      font-size: 1.25em;
+      font-size: 1.1rem;
 }
 /************Contact***************/
 .contact{
@@ -2318,7 +2311,7 @@ h10{
 
 @media (max-width: 635px) {
   .end-text{
-    margin-top: 54px !important;
+    margin-top: 31px !important;
 }
 }
 
@@ -2338,13 +2331,13 @@ h10{
    -ms-border-radius: 1px;
    -o-border-radius: 1px;
    color: #fff;
-   width: 198px;
+   width: 210px;
    background: #ed4523;
 }
 .large.button.contact{
     @extend .large.button;
     width: 210px;
-    padding: 3%;
+    padding: 25px;
     margin-top: 0px;
     display: inline-flex;
     h3 {
@@ -2365,7 +2358,7 @@ h10{
 }
 .large.button h3{
     color:#fff;
-    font-size: 1rem;
+    font-size: 17px;
    line-height: 0.23;
    letter-spacing: 0.9px;
 }
