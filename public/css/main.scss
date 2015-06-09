@@ -1090,6 +1090,59 @@ hr.about-philosophy {
   margin-top: 70px;
 }
 
+@media (max-width: 64.063em) {
+
+.work-bodytext .left-column {
+  padding: 0px !important;
+}
+
+.work-bodytext .right-column {
+  padding: 0px !important;
+}
+
+.about-bodytext .right-column>.process-text {
+  padding: 0px !important;
+}
+
+.about-bodytext .left-column>.process-text {
+  padding: 0px !important;
+}
+ 
+  .capability-details .left-column{
+  padding: 0px !important;
+} 
+  .capability-details .left-column-no{
+  padding: 0px !important;
+} 
+
+.capability-details .right-column {
+  padding: 0px !important;
+}
+
+.capability-details .right-column-no {
+  padding: 0px !important;
+}
+
+}
+
+.capability-details .left-column{
+  padding: 0px 1.635rem 0px 0px;
+  margin-bottom: 30px;
+} 
+
+.capability-details .left-column-no{
+  padding: 0px 1.635rem 0px 0px;
+} 
+
+.capability-details .right-column {
+  padding: 0px 0px 0px 1.635rem;
+  margin-bottom: 30px;
+}
+
+.capability-details .right-column-no {
+  padding: 0px 0px 0px 1.635rem;
+}
+
 .principles-capabilities {
   margin-bottom: 60px;
 }
@@ -1115,7 +1168,21 @@ hr.about-philosophy {
           transition: all .5s ease-in;
 }
 
+.about-bodytext .left-column{
+  padding: 0px 1.635rem 0px 0px;
+}
 
+.about-bodytext .right-column{
+  padding: 0px 0px 0px 1.635rem;
+}
+
+.about-bodytext .left-column > .process-text{
+  padding: 0px 1.635rem 0px 0px;
+}
+
+.about-bodytext .right-column > .process-text{
+  padding: 0px 0px 0px 1.635rem;
+}
 
 .team-pics {
 
@@ -1336,7 +1403,7 @@ margin:4rem auto;
 }
 
 .capability-details {
-      padding: 1rem 4rem 0rem 4rem;
+      padding: 0rem 4rem 0rem 4rem;
 }
 
 .capability-details h3{
@@ -1359,6 +1426,20 @@ margin:4rem auto;
 /**************End of capabilities************/
 
 /*****Work**********/
+
+.work-bodytext .left-column{
+  padding: 0px 1.635rem 0px 0px;
+} 
+
+.work-bodytext .right-column{
+  padding: 0px 0px 0px 1.635rem;
+} 
+
+.work-subheading {
+  font-family: 'MuseoSans500';
+  font-size: 1.1rem;
+}
+
 .m-menu {
     text-align: center;
     font-size: 1em;
@@ -1491,14 +1572,19 @@ margin:4rem auto;
 }
 
 .six-capabilities .columns{
-    background-color:#efefef;
     border: .063em #fff solid;
     -moz-box-sizing: border-box;
 
 }
 
-.capability-details a > p {
-  color: #008CBA;
+.strat-analytics {
+  
+}
+
+.capability-details a {
+  color: rgb(237, 69, 35);
+  font-family: 'MuseoSans';
+  font-size: 1.1rem;
 }
 
 .capabilities-text {
@@ -1546,6 +1632,30 @@ margin:4rem auto;
     @extend .capabilities-text;
    
 }
+.strategy-idle {
+  background-color: #efefef;
+}
+
+.design-idle {
+  background-color: #efefef;
+}
+
+.develop-idle {
+  background-color: #efefef;
+}
+
+.social-idle {
+  background-color: #efefef;
+}
+
+.media-idle {
+  background-color:#efefef;
+}
+
+.inter-idle {
+  background-color: #efefef;
+}
+
 .capability-svg {
         //@extend .capabilities-text;
         position: absolute;
@@ -1561,10 +1671,11 @@ svg {
     width: 100%;  
 } 
 .strategy{
-     background-color: #cf4242; 
-   /*  height: 20em;*/
-    
+     background-color: #cf4242;  
 }
+
+
+
  .design{
     background-color: #a1cc2e;
  
@@ -1577,19 +1688,12 @@ svg {
 }
 .social{
     background-color: #e68f41;
-    
-  
 }
 .media{
     background-color: #1eaad8;
-
-    
-   
 }
 .inter{
     background-color: #4677cd;
-    
-     
 }
         }
 .bck-client{
@@ -1977,9 +2081,6 @@ font-weight: bold;
     font-size: 1.5em;
     line-height: 1!important;
 }
-.fullcase{
-    margin-top:5%;
-}
 .cs-branding{
     margin-top: 5%;
     margin-left: 4.9%;
@@ -2038,22 +2139,55 @@ font-weight: bold;
     }
 }
 
+.resultsrow a {
+  color: rgb(237, 69, 35);
+}
+
+.resultsrow {
+  background: white;
+}
+
+.resultsrow h3 {
+      text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.challengerow {
+  background: white;
+}
+
+.processrow {
+  background: #efefef;
+}
+
+.conceptrow {
+  background: #efefef;
+}
+
 .case1 h3{
     text-transform: uppercase;
     font-weight: bold;
-    line-height: 2!important;
-    margin-top: 1.7%;
+    letter-spacing: 0.5px
 }
+
+.case .heading {
+      text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.case .subhead {
+  font-size: 1em;
+  letter-spacing: 0.5px;
+}
+
 case h3{
      text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 0.5px;
 }
-.case1{
-      background-color: #efefef;
-      height: 20em;
-      width: 100%;
-      padding-top: 1px;
-}
+
 @media(max-width:600px){
 .case1{
       display: table;
