@@ -950,6 +950,32 @@ ul li {
   animation: bounce 2s infinite;
 }
 
+//mobile-view
+@media(min-width:60em){
+  .desktop{
+    display:block;
+  }
+    .mobile{
+    display:none;
+  }
+}
+@media(max-width:60em){
+  .desktop{
+    display:none;
+  }
+    .mobile{
+    display:block;
+  }
+  .text{
+  -webkit-animation: stroke 7.5s infinite linear;
+  -moz-animation: stroke 7.5s infinite linear;
+  -o-animation: stroke 7.5s infinite linear;    
+  animation: stroke 7s infinite linear;
+  }
+  #s-text{
+  font-size:2em;
+  }
+}
 
 
 
@@ -2061,6 +2087,11 @@ font-weight: bold;
 }
 
 /***************case-studies*****************/
+
+.case a {
+  color: rgb(237, 69, 35);
+}
+
 .cs-branding-hero {
     height: auto;
     width: 100%;
