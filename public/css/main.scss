@@ -29,6 +29,12 @@ $namespace: true;
 }
 
 
+/* ------------- For IE ----------------------*/
+
+*::-ms-backdrop, .row {
+       max-width: 100% !important;
+    }
+
 /* ---------------Footer ------------------ */
 
 .list a:hover h7 {
