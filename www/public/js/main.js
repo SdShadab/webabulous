@@ -13,22 +13,25 @@ $('.team-pic').hover(function(){
 });
 
 
+
+
 $( document ).ready(function() {      
-    var isMobile = window.matchMedia("(max-width: 900px)");
+    var isMobile = window.matchMedia("(max-width: 900px)");   
+    var height=$(".workhover").height();
 
-    if (isMobile.matches) {
-        //Conditional script here
+   if (isMobile.matches) {
+   		$(window).scroll(function(){
+   		var scrollvalue = $(window).scrollTop()-100;
+       	var ratio = Math.floor(scrollvalue/height);
+       	
+       	console.log(ratio);
+       	$(".work_pic").find(".work-prof").eq(ratio + 1).find(".workhover").toggleClass('appear-background-work');
+       	$(".work_pic").find(".work-prof").eq(ratio + 1).find(".lookfor").toggleClass('appear-text-work');
+   		$(".work_pic").find(".work-prof").eq(ratio + 1).find(".clientprof").toggleClass('appear-text-work');
+   		});
 
-        $(".workhover:visible")
-        .delay(2000)
-        .queue(function (next) { 
-            $(this).toggleClass('appear-background-work');
-          });
-        $(".lookfor:visible").delay(2000).toggleClass('appear-text-work');
-        $(".clientprof:visible").delay(2000).toggleClass('appear-text-work');
-        $(".capability-svg").delay(2000).removeClass("hide");       
-    }
- });
+   }
+});
 
 $('.work-prof').hover(function(){
     $(this).find(".workhover").toggleClass('appear-background-work');

@@ -22,9 +22,10 @@ html {
 /*text animation*/
 
 .hovertexthome {
-    position: absolute;
+  position: absolute;
   color: white;
-  left: 44%;
+  width: 98.7%;
+  text-align: center !important;
   bottom: 10%;
   font-family: 'MuseoSans700';
 }
