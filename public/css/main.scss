@@ -32,6 +32,13 @@ $namespace: true;
 *::-ms-backdrop, .row {
     max-width: 100% !important;
 }
+
+*::-ms-backdrop, .work_pic .appear-text-work {
+    transition:none;
+}
+
+
+
 /* ---------------Footer ------------------ */
 
 .list a:hover h7 {
