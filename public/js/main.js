@@ -23,6 +23,12 @@ $(document).ready(function() {
     var height = $(".workhover").height();
 
     if (isMobile.matches) {
+
+        $(".work_pic").find(".work-prof").eq(0).find(".workhover").addClass('appear-background-work');
+        $(".work_pic").find(".work-prof").eq(0).find(".lookfor").addClass('appear-text-work');
+        $(".work_pic").find(".work-prof").eq(0).find(".clientprof").addClass('appear-text-work');
+
+
         $(window).scroll(function() {
             var scrollvalue = $(window).scrollTop() - 100;
             var ratio = Math.floor(scrollvalue / height);
