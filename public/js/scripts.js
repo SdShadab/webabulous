@@ -27,7 +27,7 @@ $('body').waitForImages(function() {
 
 setTimeout(function() {
      $('.text').fadeOut(1000,"linear");
-     $('.hovertexthome').delay(4000).fadeIn(1000);
+     $('.hovertexthome').delay(1100).fadeIn(1000);
 }, 3100)
 
 
