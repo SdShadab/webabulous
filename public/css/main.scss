@@ -2083,7 +2083,10 @@ hr {
     display: inline-block;
 }
 /***************case-studies*****************/
-
+.content-socialmedia .wrapper, .content-identity .wrapper{
+    max-width:1000px;
+    padding:0rem;
+}
 .case a {
     color: rgb(237, 69, 35);
 }
