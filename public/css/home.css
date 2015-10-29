@@ -141,7 +141,7 @@ animation: fade-in 4s;
 
 
 .star {
-    background: url("/images/webable_home_bg.jpg");
+    background: url("../images/webable_home_bg.jpg");
     margin: 0;
     padding: 0;
     width: 100%;
