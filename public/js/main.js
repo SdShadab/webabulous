@@ -129,10 +129,10 @@ $(document).ready(
 
 
 $(".capability-item").hover(function() {
-    $(this).children(".capability-svg").removeClass("hide-for-medium-up");
+    $(this).children(".capability-svg").addClass("svg-mobile-active");
     /* $(this).children(".capability-details").show();*/
 }, function() {
-    $(this).children(".capability-svg").addClass("hide-for-medium-up");
+    $(this).children(".capability-svg").removeClass("svg-mobile-active");
     $ /*(this).children(".capability-details").hide();*/
 });
 
