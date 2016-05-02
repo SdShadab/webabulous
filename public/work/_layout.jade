@@ -1,6 +1,9 @@
 doctype
 html(lang="en")
   head
+    <!--[if IE]>
+    link(rel='stylesheet', type='text/css', href='../css/all-ie-only.css')
+    <![endif]-->
     title= title
     meta(name="description" content="#{description}")
     meta(property="og:title" content="#{title}")
@@ -9,22 +12,24 @@ html(lang="en")
     meta(property="og:description" content="#{description}")
     meta(property="og:image" content="#{imageUrl}")
     meta(charset='utf-8')
-    link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='/images/favicon.ico')
+    link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='../images/favicon.ico')
     //link(type="text/css", rel="stylesheet", href="/vendors/bootstrap/css/bootstrap.min.css")
     link(type="text/css", rel="stylesheet", href="../css/main.css")
     link(rel="stylesheet" href="../css/sup-styles.css")
-    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")  
-    script(src="../js/wow.js")
-    link(rel="stylesheet" href="../css/animate.css")
-    link(rel="stylesheet" href="../css/nprogress.css")
-    link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='/images/favicon.ico')
-    script(src="../js/nprogress.js")
+    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css") 
     link(rel="stylesheet" href="../css/keyframes.css")
     link(rel="stylesheet" href="../css/pageTransitions.css")
     script(src="../js/jquery.smoothState.js")
     script(src="../js/smoothfunctions.js") 
+    script(src="../js/wow.js")
+    link(rel="stylesheet" href="../css/animate.css")
+    link(rel="stylesheet" href="../css/nprogress.css")
+    link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='../images/favicon.ico')
+    script(src="../js/nprogress.js")
     script(src="https://maps.googleapis.com/maps/api/js")
-    //script(src="../js/typed.js")
+    script(src="../js/typed.js")
+    script(src="../js/script.js")
+    script(type="text/ecmascript" xlink:href="/js/smil.user.js")
     meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
     script.
@@ -36,20 +41,20 @@ html(lang="en")
         ga('send', 'pageview');
 
  body
-    != partial("_header-image")    
+    != partial("_header")  
     .m-scene#main
-        .m-right-panel.m-page.scene_element.scene_element--fadein
+        .m-right-panel.m-page.scene_element.scene_element--fadeinup
             .mid-body
+
                 != yield
     != partial("../_footer")
+
+ 
   
-script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
-
-script(src="../js/typed.js")
-
-script(src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js")
-script(src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js")
-script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js")
-script(src="../js/foundation/foundation.topbar.js")
-script(src="../js/sup-topbar.min.js") 
-script(src="../js/main.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js")
+    script(src="../js/foundation/foundation.topbar.js")
+    script(src="../js/sup-topbar.min.js") 
+    script(src="../js/main.js")

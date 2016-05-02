@@ -238,7 +238,7 @@ var init = function() {
 var initParticleSlider = function() {
     var psScript = document.createElement('script');
     (psScript.addEventListener ? psScript.addEventListener('load', init, false) : psScript.onload = init);
-    psScript.src = '/js/function.js';
+    psScript.src = 'js/function.js';
     psScript.setAttribute('type', 'text/javascript');
     document.body.appendChild(psScript);
 }

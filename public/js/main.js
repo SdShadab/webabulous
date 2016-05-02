@@ -18,35 +18,51 @@ $('.team-pic').hover(function() {
 
 
 
+
 $(document).ready(function() {
-    var isMobile = window.matchMedia("(max-width: 900px)");
-    var height = $(".workhover").height();
+  var isMobile = window.matchMedia("(max-width: 900px)");
+  var height = $(".workhover").height();
+  var height1 = $(".svg-box").height();
+  var height2 = $(".capability-item").height();
+  console.log(height1);
+  console.log(height2);
+  if (isMobile.matches) {
 
-    if (isMobile.matches) {
+    $(".work_pic").find(".work-prof").eq(0).find(".workhover").addClass('appear-background-work');
+    $(".work_pic").find(".work-prof").eq(0).find(".lookfor").addClass('appear-text-work');
+    $(".work_pic").find(".work-prof").eq(0).find(".clientprof").addClass('appear-text-work');
 
-        $(".work_pic").find(".work-prof").eq(0).find(".workhover").addClass('appear-background-work');
-        $(".work_pic").find(".work-prof").eq(0).find(".lookfor").addClass('appear-text-work');
-        $(".work_pic").find(".work-prof").eq(0).find(".clientprof").addClass('appear-text-work');
+    $(window).scroll(function() {
+      var scrollvalue = $(window).scrollTop() - 100;
+      var ratio = Math.floor(scrollvalue / height);
 
+      var scrollvalue1 = $(window).scrollTop() - 1500 - height1;
+      var ratio1 = Math.floor(scrollvalue1 / height2);
+      console.log(scrollvalue);
+      console.log(ratio);
+if(ratio >= 0 && ratio <=13){
+      $(".work_pic").find(".work-prof").eq(ratio).find(".workhover").removeClass('appear-background-work');
+      $(".work_pic").find(".work-prof").eq(ratio).find(".lookfor").removeClass('appear-text-work');
+      $(".work_pic").find(".work-prof").eq(ratio).find(".clientprof").removeClass('appear-text-work');
 
-        $(window).scroll(function() {
-            var scrollvalue = $(window).scrollTop() - 100;
-            var ratio = Math.floor(scrollvalue / height);
+      $(".work_pic").find(".work-prof").eq(ratio + 1).find(".workhover").addClass('appear-background-work');
+      $(".work_pic").find(".work-prof").eq(ratio + 1).find(".lookfor").addClass('appear-text-work');
+      $(".work_pic").find(".work-prof").eq(ratio + 1).find(".clientprof").addClass('appear-text-work');
 
-            $(".work_pic").find(".work-prof").eq(ratio).find(".workhover").removeClass('appear-background-work');
-            $(".work_pic").find(".work-prof").eq(ratio).find(".lookfor").removeClass('appear-text-work');
-            $(".work_pic").find(".work-prof").eq(ratio).find(".clientprof").removeClass('appear-text-work');
-
-            $(".work_pic").find(".work-prof").eq(ratio + 1).find(".workhover").addClass('appear-background-work');
-            $(".work_pic").find(".work-prof").eq(ratio + 1).find(".lookfor").addClass('appear-text-work');
-            $(".work_pic").find(".work-prof").eq(ratio + 1).find(".clientprof").addClass('appear-text-work');
-
-            $(".work_pic").find(".work-prof").eq(ratio + 2).find(".workhover").removeClass('appear-background-work');
-            $(".work_pic").find(".work-prof").eq(ratio + 2).find(".lookfor").removeClass('appear-text-work');
-            $(".work_pic").find(".work-prof").eq(ratio + 2).find(".clientprof").removeClass('appear-text-work');
-        });
-
+      $(".work_pic").find(".work-prof").eq(ratio + 2).find(".workhover").removeClass('appear-background-work');
+      $(".work_pic").find(".work-prof").eq(ratio + 2).find(".lookfor").removeClass('appear-text-work');
+      $(".work_pic").find(".work-prof").eq(ratio + 2).find(".clientprof").removeClass('appear-text-work');
     }
+if(ratio1 >= 0 && ratio1 <=6){
+      $(".capability-item").eq(ratio1).find(".capability-svg").addClass('svg-mobile-active');
+      $(".capability-item").eq(ratio1 + 1).find(".capability-svg").removeClass('svg-mobile-active');
+      $(".capability-item").eq(ratio1 -1 ).find(".capability-svg").removeClass('svg-mobile-active');
+}
+    });
+
+
+
+  }
 });
 
 $('.work-prof').hover(function() {
@@ -113,10 +129,10 @@ $(document).ready(
 
 
 $(".capability-item").hover(function() {
-    $(this).children(".capability-svg").removeClass("hide-for-medium-up");
+    $(this).children(".capability-svg").addClass("svg-mobile-active");
     /* $(this).children(".capability-details").show();*/
 }, function() {
-    $(this).children(".capability-svg").addClass("hide-for-medium-up");
+    $(this).children(".capability-svg").removeClass("svg-mobile-active");
     $ /*(this).children(".capability-details").hide();*/
 });
 
@@ -132,9 +148,9 @@ $('#toggle').click(function() {
 /*    var $items = $(".work-prof");
     $items.hide();
     $items.slice(0, Math.floor($items.length/2)).show();
- 
+
 $( "#show_more" ).click(function() {
-  
+
      var $items = $(".work-prof");
     $items.show();
     $('#show_more').addClass('hidden');
@@ -350,7 +366,7 @@ if (!SVG.supported) {
             }
         }
 
-        // animate colors        
+        // animate colors
         for (var l = 0, i = objects.length; l < i; l++) {
             for (var c = 0, j = objects[l].length; c < j; c++) {
                 if (!objects[l][c]) {
